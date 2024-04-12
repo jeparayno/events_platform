@@ -5,7 +5,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-
 import { ICategory } from "@/lib/database/models/category.model"
 import { startTransition, useEffect, useState } from "react"
 import {
@@ -27,7 +26,7 @@ type DropdownProps = {
   onChangeHandler?: () => void
 }
 
-const Dropsdown = ({ value, onChangeHandler }: DropdownProps) => {
+const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
   const [categories, setCategories] = useState<ICategory[]>([])
   const [newCategory, setNewCategory] = useState('');
 
@@ -82,4 +81,4 @@ const Dropsdown = ({ value, onChangeHandler }: DropdownProps) => {
   )
 }
 
-export default Dropsdown
+export default Dropdown
