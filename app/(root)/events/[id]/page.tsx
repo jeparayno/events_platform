@@ -16,7 +16,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
 
   return (
     <>
-    <section className="flex justify-center bg-primary-50 bg-dotted-pattern bg-contain">
+    <section className="flex justify-center bg-neutral-50 bg-dotted-pattern bg-contain">
       <div className="grid grid-cols-1 md:grid-cols-2 2xl:max-w-7xl">
         <Image 
           src={event.imageUrl}
@@ -35,7 +35,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
                 <p className="p-bold-20 rounded-full bg-green-500/10 px-5 py-2 text-green-700">
                   {event.isFree ? 'FREE' : `$${event.price}`}
                 </p>
-                <p className="p-medium-16 rounded-full bg-grey-500/10 px-4 py-2.5 text-grey-500">
+                <p className="p-medium-16 rounded-full bg-gray-500/10 px-4 py-2.5 text-grey-500">
                   {event.category.name}
                 </p>
               </div>
@@ -55,7 +55,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
               <div className="p-medium-16 lg:p-regular-20 flex flex-wrap items-center">
                 <p>
                   {formatDateTime(event.startDateTime).dateOnly} - {' '}
-                  {formatDateTime(event.startDateTime).timeOnly} / 
+                  {formatDateTime(event.startDateTime).timeOnly}
                 </p>
                 <p>
                   {formatDateTime(event.endDateTime).dateOnly} -  {' '}
@@ -86,7 +86,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
       <Collection 
           data={relatedEvents?.data}
           emptyTitle="No Events Found"
-          emptyStateSubText="Come back later"
+          emptyStateSubtext="Come back later"
           collectionType="All_Events"
           limit={3}
           page={searchParams.page as string}
