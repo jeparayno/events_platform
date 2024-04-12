@@ -27,7 +27,7 @@ type DropdownProps = {
   onChangeHandler?: () => void
 }
 
-const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
+const Dropsdown = ({ value, onChangeHandler }: DropdownProps) => {
   const [categories, setCategories] = useState<ICategory[]>([])
   const [newCategory, setNewCategory] = useState('');
 
@@ -82,4 +82,4 @@ const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
   )
 }
 
-export default Dropdown
+export default Dropsdown
